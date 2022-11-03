@@ -13,6 +13,13 @@ CC = clang++
 FLAGS = -g -O3 -std=c++17 -Wall -Werror -Wextra
 RM = rm -rf
 
+JSONCPP_LIB = jsoncpp/1.9.5/lib/libjsoncpp.dylib
+JSONCPP_INCLUDES = jsoncpp/1.9.5/include/json
+
+DIR_INCLUDES = includes
+INCLUDES = Parser.hpp
+INCLUDES_PATH = $(addprefix $(DIR_INCLUDES)/, $(INCLUDES))
+
 GREEN = \033[0;32m
 RESET = \033[0m
 
@@ -20,7 +27,7 @@ all: $(NAME)
 
 $(NAME): write_logo create_dirs $(PATH_OBJS)
 	@echo "$(GREEN)\nObjects was created $(RESET)"
-	@$(CC) $(FLAGS) $(PATH_OBJS) $(GLFLAGS) -I $(DIR_INCLUDES) -I $(GLFW_HEADERS_DIR) -I $(GLAD_HEADERS_DIR) -I $(GLEW_HEADERS_DIR) -I $(GLM_HEADERS_DIR) -I $(GLM_HEADERS_DIR) -o $@
+	@$(CC) $(FLAGS) $(PATH_OBJS) -o $@ $(JSONCPP_LIB)
 	@echo "$(GREEN)Simply the best hard multi-d ray-tracing mother lover by peace dukes was compiled $(RESET)"
 
 write_logo:
@@ -65,7 +72,7 @@ create_dirs:
 	@mkdir -p $(DIR_OBJS) $(DIR_SRCS_OBJS)
 
 $(DIR_OBJS)/%.o: $(DIR_SRCS)/%.cpp $(INCLUDES_PATH) Makefile
-	@$(CC) $(FLAGS) -c $< -o $@
+	@$(CC) $(FLAGS) -I $(JSONCPP_INCLUDES) -I $(DIR_INCLUDES) -c $< -o $@
 	@echo "$(GREEN).$(RESET)\c"
 
 clean:

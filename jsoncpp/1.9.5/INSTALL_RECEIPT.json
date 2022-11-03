@@ -1,0 +1,46 @@
+{
+  "homebrew_version": "3.3.10-21-g3ba6afb",
+  "used_options": [
+
+  ],
+  "unused_options": [
+
+  ],
+  "built_as_bottle": true,
+  "poured_from_bottle": true,
+  "loaded_from_api": null,
+  "installed_as_dependency": false,
+  "installed_on_request": true,
+  "changed_files": [
+    "lib/pkgconfig/jsoncpp.pc"
+  ],
+  "time": 1667491853,
+  "source_modified_time": 1635962008,
+  "compiler": "clang",
+  "aliases": [
+
+  ],
+  "runtime_dependencies": [
+
+  ],
+  "source": {
+    "spec": "stable",
+    "versions": {
+      "stable": "1.9.5",
+      "head": null,
+      "version_scheme": 0
+    },
+    "path": "/Users/odomenic/.brew/Library/Taps/homebrew/homebrew-core/Formula/jsoncpp.rb",
+    "tap_git_head": "ea7e6a6474f610aee63825baed6f081b98ab124e",
+    "tap": "homebrew/core"
+  },
+  "arch": "x86_64",
+  "built_on": {
+    "os": "Macintosh",
+    "os_version": "macOS 11.6",
+    "cpu_family": "penryn",
+    "xcode": "13.1",
+    "clt": "13.1.0.0.1.1633545042",
+    "preferred_perl": "5.30"
+  }
+}
