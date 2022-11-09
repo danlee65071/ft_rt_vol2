@@ -1,3 +1,3 @@
 # pragma once
 
-void ParserTest1();
+void ParserTests();

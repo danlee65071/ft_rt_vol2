@@ -3,6 +3,6 @@
 
 int main()
 {
-    ParserTest1();
+    ParserTests();
     return 0;
 }

@@ -13,10 +13,28 @@ void ParserTest1()
     {
         parser.parseJson(filename);
     }
-    catch(const std::exception& e)
+    catch(const Parser::EmptyFilenameException& e)
     {
         error_msg = e.what();
     }
     assert(error_msg == real_error_msg);
-    std::cout << "Test1: ok!" << std::endl;
+    std::cout << "\033[0;32mParser test1: ok!" << std::endl;
+}
+
+void ParserTest2()
+{
+    Parser parser;
+    std::string filename = "test_scenes/ParserTest2.json";
+    Json::Value v = parser.parseJson(filename);
+
+    assert(v["camera"]["x"] == 0.);
+    assert(v["camera"]["y"] == 0.);
+    assert(v["camera"]["z"] == 0.);
+    std::cout << "\033[0;32mParser test2: ok!" << std::endl;
+}
+
+void ParserTests()
+{
+    ParserTest1();
+    ParserTest2();
 }
