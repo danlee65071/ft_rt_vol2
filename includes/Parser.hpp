@@ -1,10 +1,11 @@
-#pragma once
-#include "json.h"
-#include <iostream>
-#include <string>
-#include <fstream>
+# pragma once
+# include <json/json.h>
+# include <iostream>
+# include <string>
+# include <fstream>
 
-class Parser {
+class Parser
+{
     private:
         Json::Value _root;
 
@@ -16,4 +17,6 @@ class Parser {
     public:
         Parser();
         ~Parser();
+
+        Json::Value parseJson(std::string filename);
 };

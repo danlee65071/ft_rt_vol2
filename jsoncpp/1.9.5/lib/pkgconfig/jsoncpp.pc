@@ -1,9 +1,0 @@
-prefix=/Users/odomenic/.brew/Cellar/jsoncpp/1.9.5
-libdir=${prefix}/lib
-includedir=${prefix}/include
-
-Name: jsoncpp
-Description: A C++ library for interacting with JSON
-Version: 1.9.4
-Libs: -L${libdir} -ljsoncpp
-Cflags: -I${includedir}
