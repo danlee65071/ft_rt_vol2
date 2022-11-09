@@ -41,13 +41,10 @@ RESET = \033[0m
 
 all: $(NAME)
 
-$(NAME): vcpkg write_logo create_dirs $(PATH_OBJS)
+$(NAME): write_logo create_dirs $(PATH_OBJS)
 	@echo "$(GREEN)\nObjects was created $(RESET)"
 	@$(CC) $(FLAGS) $(PATH_OBJS) -o $@ $(JSONCPP_LIB)
 	@echo "$(GREEN)Simply the best hard multi-d ray-tracing mother lover by peace dukes was compiled $(RESET)"
-
-vcpkg:
-	@git clone https://github.com/microsoft/vcpkg.git
 
 # Чтобы было красиво
 write_logo:
@@ -105,4 +102,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re write_logo create_dirs vcpkg
+.PHONY: all clean fclean re write_logo create_dirs
