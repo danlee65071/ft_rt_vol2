@@ -1,0 +1,7 @@
+-- Downloading https://github.com/open-source-parsers/jsoncpp/archive/1.9.5.tar.gz -> open-source-parsers-jsoncpp-1.9.5.tar.gz...
+-- Extracting source /Users/hcharlsi/Desktop/ft_rt_vol2/vcpkg/downloads/open-source-parsers-jsoncpp-1.9.5.tar.gz
+-- Using source at /Users/hcharlsi/Desktop/ft_rt_vol2/vcpkg/buildtrees/jsoncpp/src/1.9.5-13b47286ba.clean
+-- Configuring x64-osx
+-- Building x64-osx-dbg
+-- Building x64-osx-rel
+-- Installing: /Users/hcharlsi/Desktop/ft_rt_vol2/vcpkg/packages/jsoncpp_x64-osx/share/jsoncpp/copyright

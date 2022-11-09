@@ -1,0 +1,7 @@
+{
+    "camera": {
+        "position": [0, 0, 0],
+        "fov": "120",
+        "direction": [1, 1, 1]
+    }
+}
