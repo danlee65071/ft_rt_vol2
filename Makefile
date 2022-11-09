@@ -30,7 +30,7 @@ JSONCPP_DIR = $(addprefix $(VCPKG_DIR)/, jsoncpp_x64-osx)
 JSONCPP_LIB = $(addprefix $(JSONCPP_DIR)/, lib/libjsoncpp.a)
 JSONCPP_INCLUDES = $(addprefix $(JSONCPP_DIR)/, include)
 
-# Пути до *.h
+# Пути до *.hpp
 DIR_INCLUDES = includes
 INCLUDES = Parser.hpp
 INCLUDES_PATH = $(addprefix $(DIR_INCLUDES)/, $(INCLUDES))
@@ -41,10 +41,13 @@ RESET = \033[0m
 
 all: $(NAME)
 
-$(NAME): write_logo create_dirs $(PATH_OBJS)
+$(NAME): vcpkg write_logo create_dirs $(PATH_OBJS)
 	@echo "$(GREEN)\nObjects was created $(RESET)"
 	@$(CC) $(FLAGS) $(PATH_OBJS) -o $@ $(JSONCPP_LIB)
 	@echo "$(GREEN)Simply the best hard multi-d ray-tracing mother lover by peace dukes was compiled $(RESET)"
+
+vcpkg:
+	@git clone https://github.com/microsoft/vcpkg.git
 
 # Чтобы было красиво
 write_logo:
@@ -102,4 +105,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re write_logo create_dirs
+.PHONY: all clean fclean re write_logo create_dirs vcpkg

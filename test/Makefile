@@ -54,6 +54,7 @@ clean:
 fclean: clean
 	@$(RM) $(NAME)
 	@echo "$(GREEN) fclean instruction was executed $(RESET)"
+	@make fclean -C ..
 
 re: fclean all
 
