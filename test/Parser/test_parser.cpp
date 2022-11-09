@@ -13,7 +13,7 @@ void ParserTest1()
     {
         parser.parseJson(filename);
     }
-    catch(const Parser::EmptyFilenameException& e)
+    catch(const std::exception& e)
     {
         error_msg = e.what();
     }

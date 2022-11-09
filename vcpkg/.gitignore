@@ -285,7 +285,6 @@ __pycache__/
 /build*/
 /downloads/
 /installed*/
-/packages/
 /scripts/buildsystems/tmp/
 #ignore custom triplets
 /triplets/*
