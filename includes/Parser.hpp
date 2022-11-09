@@ -19,4 +19,11 @@ class Parser
         ~Parser();
 
         Json::Value parseJson(std::string filename);
+
+// Exceptions
+        class EmptyFilenameException: std::exception
+        {
+            public:
+                const char* what() const throw();
+        };
 };

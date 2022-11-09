@@ -1,7 +1,8 @@
-#include "Parser.hpp"
-#include <cassert>
+# include "unittest.hpp"
+# include <cassert>
 
-int main() {
-
+int main()
+{
+    ParserTest1();
     return 0;
 }

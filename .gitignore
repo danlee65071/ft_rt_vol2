@@ -1,2 +1,4 @@
 objs
 RT
+test/objs
+.vscode

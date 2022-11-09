@@ -5,6 +5,7 @@ NAME = RT
 DIR_SRCS = srcs
 SRCS = main.cpp
 
+# Parser
 DIR_PARSER = Parser
 SRCS_PARSER = Parser.cpp
 SRCS += $(addprefix $(DIR_PARSER)/, $(SRCS_PARSER))
