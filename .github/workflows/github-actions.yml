@@ -11,6 +11,6 @@ jobs:
     runs-on: macos-10.15
     steps:
       - uses: actions/checkout@v3
-      - run: curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
-      - run: brew install jsoncpp
+      - run: make
+      - run: cd test
       - run: make
