@@ -11,6 +11,12 @@ SRCS_PARSER = Parser.cpp
 SRCS += $(addprefix $(DIR_PARSER)/, $(SRCS_PARSER))
 DIRS = $(DIR_PARSER)
 
+# Parser
+DIR_SCENE = Scene
+SRCS_SCENE = Scene.cpp
+SRCS += $(addprefix $(DIR_SCENE)/, $(SRCS_SCENE))
+DIRS += $(DIR_SCENE)
+
 # Пути до *.o
 DIR_OBJS = objs
 OBJS = $(patsubst %.cpp, %.o, $(SRCS))
@@ -32,7 +38,7 @@ JSONCPP_INCLUDES = $(addprefix $(JSONCPP_DIR)/, include)
 
 # Пути до *.hpp
 DIR_INCLUDES = includes
-INCLUDES = Parser.hpp
+INCLUDES = RT.hpp Parser.hpp Scene.hpp
 INCLUDES_PATH = $(addprefix $(DIR_INCLUDES)/, $(INCLUDES))
 
 # Цвета

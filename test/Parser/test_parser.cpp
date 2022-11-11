@@ -24,7 +24,7 @@ void ParserTest1()
 void ParserTest2()
 {
     Parser parser;
-    std::string filename = "test_scenes/ParserTest2.json";
+    std::string filename = "test/test_scenes/ParserTest2.json";
     Json::Value v = parser.parseJson(filename);
 
     assert(v["camera"]["x"] == 0.);
