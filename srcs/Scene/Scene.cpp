@@ -2,7 +2,7 @@
  * @ Author: Daniil Lee
  * @ Create Time: 2022-11-10 13:55:58
  * @ Modified by: Daniil Lee
- * @ Modified time: 2022-11-11 17:52:22
+ * @ Modified time: 2022-11-11 18:01:20
  * @ Description: Scene class implemetation
  */
 
